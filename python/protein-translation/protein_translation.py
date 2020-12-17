@@ -19,18 +19,13 @@ def proteins(strand):
                     'UAG': 'STOP',
                     'UGA': 'STOP',
                     }
-    if len(strand) == 3:
-        outputs.append(protein_dict.get(strand))
 
-    elif len(strand) > 3:
-        index = range(0, len(strand), 3)
+    index = range(0, len(strand), 3)
 
-        for i in index:
-            start = i
-            end = i + 3
-            outputs.append(protein_dict.get(strand[start:end]))
-    else:
-        return []
+    for i in index:
+        start = i
+        end = i + 3
+        outputs.append(protein_dict.get(strand[start:end]))
 
     if "STOP" in outputs:
         ndx = outputs.index('STOP')
