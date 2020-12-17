@@ -23,9 +23,7 @@ def proteins(strand):
     index = range(0, len(strand), 3)
 
     for i in index:
-        start = i
-        end = i + 3
-        outputs.append(protein_dict.get(strand[start:end]))
+        outputs.append(protein_dict.get(strand[i:i+3]))
 
     if "STOP" in outputs:
         ndx = outputs.index('STOP')
