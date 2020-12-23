@@ -8,11 +8,7 @@ def convert(number):
                 yield i
 
     if number:
-        factor_output = factor(number)
-        for i in factor_output:
-            output.append(_factor.get(i))
-        outputx = ''.join(output)
-        if outputx:
-            return outputx
-        else:
-            return str(number)
+        output = [_factor.get(i) for i in factor(number)]
+        if output:
+            return ''.join(output)
+        return str(number)
