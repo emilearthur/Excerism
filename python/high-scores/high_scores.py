@@ -11,7 +11,7 @@ def personal_best(scores):
 
 
 def personal_top_three(scores):
-    # using reverse blob algorith
+    # using reverse blob algorithm
     n = len(scores)
     for i in range(n-1, 0, -1):
         for j in range(i):
