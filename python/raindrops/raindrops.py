@@ -6,6 +6,6 @@ def convert(number):
         if number % key == 0:
             output.append(value)
 
-    if output:
-        return ''.join(output)
-    return str(number)
+    # output = ''.join([str(_n) for _n in output if _n])
+
+    return ''.join([str(_n) for _n in output if _n]) if output else str(number)
