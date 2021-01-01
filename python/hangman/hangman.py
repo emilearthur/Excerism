@@ -27,7 +27,8 @@ class Hangman:
                 self.remaining_guesses -= 1
 
     def get_masked_word(self):
-        return ''.join(map(lambda c: c if c in self.chars else '_', self.word))
+        return "".join(["_" if char not in self.chars else char for char
+                        in self.word])
 
     def get_status(self):
         return self.status
