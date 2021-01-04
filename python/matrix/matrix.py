@@ -3,10 +3,8 @@ class Matrix:
         self._row = [[int(i) for i in j.split(' ')] for j in
                      matrix_string.split('\n')]
 
-        self._col = list(map(list, zip(*self._row)))
-
     def row(self, index):
         return self._row[index-1]
 
     def column(self, index):
-        return self._col[index-1]
+        return list(map(list, zip(*self._row)))[index-1]
